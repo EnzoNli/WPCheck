@@ -1,9 +1,5 @@
 # WPCheck – Le Scanner de Sécurité WordPress Complet
 
-**"Parce que chaque site WordPress mérite d'être sécurisé."**
-
----
-
 ## 🧐 Qu'est-ce que WPCheck ?
 
 **WPCheck** est un scanner de sécurité **tout-en-un pour WordPress** écrit en Bash. Il automatise l'installation d'une série d'outils de sécurité et exécute plusieurs tests afin de détecter les vulnérabilités, les mauvaises configurations et les expositions courantes sur les sites WordPress. Que vous souhaitiez vérifier l'accessibilité de fichiers sensibles, scanner pour des vulnérabilités de login ou obtenir une note de sécurité détaillée via MDN Observatory, WPCheck centralise toutes ces fonctionnalités dans un seul script facile à utiliser.
