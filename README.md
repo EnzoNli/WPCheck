@@ -4,7 +4,6 @@
 
 **WPCheck** est un scanner de sécurité **tout-en-un pour WordPress** écrit en Bash. Il automatise l'installation d'une série d'outils de sécurité et exécute plusieurs tests afin de détecter les vulnérabilités, les mauvaises configurations et les expositions courantes sur les sites WordPress. Que vous souhaitiez vérifier l'accessibilité de fichiers sensibles, scanner pour des vulnérabilités de login ou obtenir une note de sécurité détaillée via MDN Observatory, WPCheck centralise toutes ces fonctionnalités dans un seul script facile à utiliser.
 
----
 
 ## 🚀 Comment ça marche
 
@@ -33,32 +32,29 @@
    - **Test des Mots de Passe par Défaut :**  
      - Optionnellement, teste des combinaisons courantes (via Hydra) sur la page de login (cette étape est ignorée en mode passif).
 
----
 
 ## ⚙️ Fonctionnalités
 
-- ✅ **Installation Automatique des Outils :** WPCheck installe les dépendances manquantes (WPScan, Hydra, Nikto, Dirb, Wapiti et Go pour wpprobe) de manière autonome.
-- ✅ **Multiples Méthodes de Scan :** Combine les scans de wpprobe, Wapiti, Dirb, Nikto et WPScan pour une évaluation complète de la sécurité.
-- ✅ **Vérification des Fichiers & Endpoints Critiques :** Analyse des fichiers tels que `xmlrpc.php`, `debug.log`, les sauvegardes de `wp-config.php` et `sitemap.xml`.
-- ✅ **Évaluation des Headers de Sécurité :** Grâce à l'API MDN Observatory, obtention d'une note de sécurité et d'un score.
-- ✅ **Téléchargement du Dossier Uploads :** Récupération des fichiers du dossier `uploads` (filtrage des fichiers non critiques) dans le dossier `output`.
-- ✅ **Test des Mots de Passe par Défaut :** Possibilité d'exécuter un test de force brute sur la page de login avec Hydra.
-- ✅ **Mode Passif :** Offre une option non agressive qui limite certaines fonctionnalités :
+✅ **Installation Automatique des Outils :** WPCheck installe les dépendances manquantes (WPScan, Hydra, Nikto, Dirb, Wapiti et Go pour wpprobe) de manière autonome.  
+✅ **Multiples Méthodes de Scan :** Combine les scans de wpprobe, Wapiti, Dirb, Nikto et WPScan pour une évaluation complète de la sécurité.  
+✅ **Vérification des Fichiers & Endpoints Critiques :** Analyse des fichiers tels que `xmlrpc.php`, `debug.log`, les sauvegardes de `wp-config.php` et `sitemap.xml`.  
+✅ **Évaluation des Headers de Sécurité :** Grâce à l'API MDN Observatory, obtention d'une note de sécurité et d'un score.  
+✅ **Téléchargement du Dossier Uploads :** Récupération des fichiers du dossier `uploads` (filtrage des fichiers non critiques) dans le dossier `output`.  
+✅ **Test des Mots de Passe par Défaut :** Possibilité d'exécuter un test de force brute sur la page de login avec Hydra.  
+✅ **Mode Passif :** Offre une option non agressive qui limite certaines fonctionnalités :  
   - Pour Dirb, affiche uniquement le contenu de `robots.txt`.
   - Pour WPScan, limite certaines options agressives.
   - Ignore les tests de brute force et le téléchargement du dossier uploads.
-- ✅ **Modularité :** Possibilité de passer certains tests via des options en ligne de commande (Dirb, Nikto, Wapiti ou vérification des mots de passe).
+✅ **Modularité :** Possibilité de passer certains tests via des options en ligne de commande (Dirb, Nikto, Wapiti ou vérification des mots de passe).  
 
----
 
 ## 📌 Limitations
 
-- 🔹 **Privilèges Sudo Nécessaires :** Certaines installations d'outils requièrent des droits administrateur.
-- 🔹 **Impact Réseau :** Les scans actifs (notamment les tests de brute force) peuvent générer un trafic important – à utiliser de manière responsable.
-- 🔹 **Variations Selon le Site :** Les résultats peuvent varier en fonction de la configuration et des mesures de sécurité mises en place sur le site cible.
-- 🔹 **Contraintes du Mode Passif :** Le mode passif réduit l'impact sur le serveur, mais peut ne pas révéler l'ensemble des vulnérabilités.
+🔹 **Privilèges Sudo Nécessaires :** Certaines installations d'outils requièrent des droits administrateur.  
+🔹 **Impact Réseau :** Les scans actifs (notamment les tests de brute force) peuvent générer un trafic important – à utiliser de manière responsable.  
+🔹 **Variations Selon le Site :** Les résultats peuvent varier en fonction de la configuration et des mesures de sécurité mises en place sur le site cible.  
+🔹 **Contraintes du Mode Passif :** Le mode passif réduit l'impact sur le serveur, mais peut ne pas révéler l'ensemble des vulnérabilités.  
 
----
 
 ## 🔧 Installation
 
@@ -82,7 +78,6 @@
    chmod +x wpcheck.sh
    ```
    
----
 
 ## 🕵️ Utilisation
 
@@ -127,16 +122,6 @@
   ./wpcheck.sh --url http://example.com --skip-passwords
   ```
 
----
-
-## 🎯 Pourquoi WPCheck ?
-
-WPCheck offre une solution **tout-en-un** pour évaluer la sécurité de vos sites WordPress. En automatisant l'installation des outils et en combinant plusieurs techniques de scan, il vous permet de :
-- **Identifier rapidement** les vulnérabilités et les mauvaises configurations.
-- **Gagner du temps** grâce à l'automatisation et aux tests modulaires.
-- **Renforcer la sécurité** de votre site en mettant en évidence les points faibles avant que des attaquants ne les exploitent.
-
----
 
 ## 🤖 Améliorations Futures
 
@@ -149,5 +134,4 @@ WPCheck offre une solution **tout-en-un** pour évaluer la sécurité de vos sit
 
 Le script utilise divers outils open-source tels que WPScan, Hydra, Nikto, Dirb, Wapiti et wpprobe.
 
----
 
